@@ -18,10 +18,14 @@
     <ClCompile Include="Hello.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Copy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Desktop\Jpeg_Grey.jpeg">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <Image Include="..\..\..\..\Desktop\Jpeg_Grey.jpeg" />
   </ItemGroup>
 </Project>
