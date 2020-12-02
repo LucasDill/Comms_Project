@@ -194,6 +194,23 @@ void njDone(void);
 #define NJ_CHROMA_FILTER 1
 #endif
 
+////////////////////////////////////////////ADDED BY LUCAS TO REPRESENT THE BMP HEADER
+typedef struct {
+	long filesize;
+	char reserved[2];
+	long headersize;
+	long infoSize;
+	long width;
+	long depth;
+	short biPlanes;
+	short bits;
+	long biCompression;
+	long biSizeImahe;
+	long biXPelsPerMeter;
+	long biYPelsPerMeter;
+	long biClrUsed;
+	long biClrImportant;
+} BitMapHeader;
 
 ///////////////////////////////////////////////////////////////////////////////
 // EXAMPLE PROGRAM                                                           //
@@ -206,6 +223,7 @@ void njDone(void);
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
+#include <typeinfo>
 int main() {
 	int size;
 	char* buf;
@@ -215,7 +233,7 @@ int main() {
 	//	printf("Usage: %s <input.jpg> [<output.ppm>]\n", argv[0]);
 		//return 2;
 	//}
-	f = fopen("Example.jfif", "rb");
+	f = fopen("Jpeg_Grey.jpeg", "rb");
 	if (!f) {
 		printf("Error opening the input file.\n");
 		return 1;

@@ -27,6 +27,9 @@
     <ClCompile Include="Copy3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Copy4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\Desktop\Jpeg_Grey.jpeg" />
