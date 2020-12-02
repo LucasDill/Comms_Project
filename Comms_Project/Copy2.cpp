@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include <iostream>
 
 typedef unsigned char u8;
 typedef unsigned short u16;
@@ -288,6 +289,7 @@ void _save_to_ppm(struct s_jctx* j) {
 	if (j->scan_out) {
 		FILE* fp = fopen("export.ppm", "wb");
 		assert(fp);
+		std::cout << j;
 		fprintf(fp, "P%d\n", j->mcu_blocks <= 1 ? 5 : 6);
 		fprintf(fp, "%d %d\n255\n", j->width, j->height);
 		fwrite(j->pixels, 1, j->pixels_len, fp);
@@ -738,17 +740,17 @@ int _decode(struct s_bctx* b, struct s_jctx* j) {
 }
 
 
-int test2(int argc, char* argv[])
+int test(int argc, char* argv[])
 {
 	long length = 0;
 	u8* content = NULL;
 
 	//if (argc != 2) {
 	//	_log(D_INFO, "%s FILE.JPG\n", argv[0]);
-		return 0;
+		//return 0;
 	//}
 
-	if (_get_file_content("Jpeg_Grey.jpeg", &content, &length)) {
+	if (_get_file_content("C:\\Users\\ldill\\Desktop\\Test_img.jpeg", &content, &length)) {
 		struct s_bctx* b = _create_bctx(content, (u32)length);
 		struct s_jctx* j = _create_jctx();
 

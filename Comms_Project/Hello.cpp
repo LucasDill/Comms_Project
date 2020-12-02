@@ -11,7 +11,7 @@ using namespace std;
 using namespace cv;
 #define _CRT_SECURE_NO_WARNINGS
 
-int main() {
+int test() {
 	
 	cout << "Hello World\n";
 	//char ch;
